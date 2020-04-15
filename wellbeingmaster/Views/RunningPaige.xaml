@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+          
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="wellbeingmaster.Views.RunningPaige"
+                       xmlns:controls="clr-namespace:wellbeingmaster.Controls"
+
+             >
+    <ContentPage.Content>
+      
+          <controls:ExtendedScrollView HasTopPadding="False">
+    
+
+          
+                   <StackLayout Padding="0, 0, 0, 40">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                 <ffimageloading:CachedImage Source="running.png"
+                                                 HeightRequest="400"
+                                                Aspect="AspectFill"/>
+                    <yummy:PancakeView Grid.Row="1" CornerRadius="10"
+                                       x:Name="detailContainer"
+                                    BackgroundColor="{DynamicResource background}"
+                                        HasShadow="True" Elevation="5"   TranslationY="100"
+                                       Margin="20, -150, 20, 0"> 
+                        <Grid Padding="10, 15"
+                              RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                      
+
+                             <StackLayout Orientation="Horizontal" 
+                                         Spacing="30"
+                                            
+                                         Grid.Row="5">
+                                <yummy:PancakeView      
+                                                   HorizontalOptions="FillAndExpand">
+                                <Button Text="Start Run"
+                                        CornerRadius="10"
+                                        BackgroundColor="#3596fc"
+                                        TextColor="White"/>
+                                    </yummy:PancakeView>
+                                 </StackLayout>
+
+
+
+                                
+                            <BoxView 
+                                     Grid.Row="2"/>
+                            <StackLayout Grid.Row="3"
+                                         Padding="15"
+                                         Orientation="Horizontal">
+                                <Label HorizontalOptions="StartAndExpand"
+                                       FontSize="Medium">
+                                   
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Speed" FontSize="Large" TextColor="White"/>
+                                            
+                                            </FormattedString>
+                                    </Label.FormattedText>
+
+
+                                </Label>
+                                <Label HorizontalOptions="StartAndExpand"
+                                       FontSize="Medium">
+                                   
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="0.00" FontSize="Large" TextColor="White"/>
+                                            
+                                            </FormattedString>
+                                    </Label.FormattedText></Label>
+                                <Label  
+                                       FontSize="Medium">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Duration: &#160;" />
+                                            <Span Text="6 miles"></Span>
+                                           </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+              </Grid>
+                        </yummy:PancakeView>
+                    </Grid>
+                       </StackLayout>
+                
+       </controls:ExtendedScrollView>
+     
+       
+    </ContentPage.Content>
+</ContentPage>
